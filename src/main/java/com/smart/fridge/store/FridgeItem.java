@@ -10,11 +10,14 @@ import javax.json.bind.annotation.JsonbDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@MongoEntity(collection="Item")
+@MongoEntity(collection = "Item")
 @Setter
 public class FridgeItem extends PanacheMongoEntity {
     public ObjectId id;
     public String name;
+    public String quantity;
+    public Integer count;
+    public String imageUrl;
     @JsonbDateFormat("yyyy-MM-dd")
     public LocalDate expireDate;
     @JsonbDateFormat("yyyy-MM-dd H:m:s")
