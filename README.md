@@ -22,8 +22,7 @@ If some recipes contains also other not included ingredients it is also given in
 ## Features Ideas
 * If there are missed ingredients for an recipe call a local market store with the missed ingredients and checkout to get the missed ingredients soon.
 * Translation (or use a API which can translate or is driven by a german company. Unfortunately chefkoch.de has no api)
-* Reminder to notificate for foods which expires soon
-* Scan foods before inserting them to the fridge to get name and expire date
+* Reminder to notify for foods which expires soon
 
 ## Build setup
 ### Docker build
@@ -46,6 +45,4 @@ $ docker-compose up -d
 
 ## Some demo images
 
-![alt smart-fridge-demo-1](assets/img/smart-fridge-demo-1.png)
-
-![alt smart-fridge-demo-2](assets/img/smart-fridge-demo-2.png)
+![alt smart-fridge-demo](assets/img/smart-fridge-demo.png)
