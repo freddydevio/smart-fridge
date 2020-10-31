@@ -25,6 +25,14 @@ public class FridgeStoreApi {
         return FridgeItem.findById(new ObjectId(id));
     }
 
+    @PUT
+    @Path("/{id}")
+    public Response update(@PathParam("id") String id, FridgeItem fridgeItem) {
+        FridgeItem.update(fridgeItem);
+
+        return Response.ok().build();
+    }
+
     @DELETE
     @Path("/{id}")
     public Response deleteOne(@PathParam("id") String id) {
