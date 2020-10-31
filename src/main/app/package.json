@@ -1,0 +1,30 @@
+{
+  "name": "smart-fridge-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --dest ../resources/META-INF/resources/"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "nativescript-camera": "^4.5.0",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-barcode-reader": "0.0.3",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-pwa": "^4.5.0",
+    "@vue/cli-service": "^4.5.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

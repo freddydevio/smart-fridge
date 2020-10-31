@@ -25,4 +25,6 @@ public class Recipe {
     private String summary;
     private int readyInMinutes;
     private String spoonacularSourceUrl;
+    private ArrayList analyzedInstructions;
+    private ArrayList extendedIngredients;
 }

@@ -6,7 +6,7 @@ import javax.ws.rs.*;
 
 @RegisterRestClient
 @Produces("application/json")
-public interface RecipeSearchGateway {
+public interface FoodGateway {
     @GET
     @Path("/findByIngredients")
     String getByIngredients(

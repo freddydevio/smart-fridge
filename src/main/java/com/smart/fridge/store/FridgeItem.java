@@ -15,6 +15,9 @@ import java.time.LocalDateTime;
 public class FridgeItem extends PanacheMongoEntity {
     public ObjectId id;
     public String name;
+    public int count;
+    public String unit;
+    public String imageUrl;
     @JsonbDateFormat("yyyy-MM-dd")
     public LocalDate expireDate;
     @JsonbDateFormat("yyyy-MM-dd H:m:s")

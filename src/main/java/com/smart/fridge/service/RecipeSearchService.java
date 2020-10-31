@@ -55,6 +55,19 @@ public class RecipeSearchService {
         return searchOutput;
     }
 
+    public RecipeSearchOutput searchDetail(int recipeId, RecipeSearchInput searchInput) {
+        RecipeSearchOutput searchOutput = new RecipeSearchOutput();
+
+        Recipe recipe = new Recipe();
+        recipe.setRecipeId(recipeId);
+
+        this.getRecipeInformation(recipe, searchInput);
+
+        searchOutput.addRecipe(recipe);
+
+        return searchOutput;
+    }
+
     private void getRecipeInformation(Recipe recipe, RecipeSearchInput searchInput) {
         JsonObject recipeInformation = JsonParser.parseString(
                 recipeSearchGateway.getRecipeInformation(
@@ -69,6 +82,9 @@ public class RecipeSearchService {
         recipe.setReadyInMinutes(recipeInformation.get("readyInMinutes").getAsInt());
         recipe.setSourceUrl(recipeInformation.get("sourceUrl").getAsString());
         recipe.setSummary(recipeInformation.get("summary").getAsString());
+        recipe.setImageUrl(recipeInformation.get("image").getAsString());
         recipe.setSpoonacularSourceUrl(recipeInformation.get("spoonacularSourceUrl").getAsString());
+        recipe.setAnalyzedInstructions(new Gson().fromJson(recipeInformation.get("analyzedInstructions"), ArrayList.class));
+        recipe.setExtendedIngredients(new Gson().fromJson(recipeInformation.get("extendedIngredients"), ArrayList.class));
     }
 }
