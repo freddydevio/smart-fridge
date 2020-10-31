@@ -27,7 +27,7 @@ If some recipes contains also other not included ingredients it is also given in
 ## Build setup
 ### Docker build
 ```
-Build docker image
+Build docker image - please be aware of a lot of ram usage! Therefore u may use the already built version in dockerhub :) 
 $ docker build -f src/main/docker/Dockerfile.multistage -t smart-fridge:latest .
 ```
 
@@ -36,9 +36,6 @@ $ docker build -f src/main/docker/Dockerfile.multistage -t smart-fridge:latest .
 Starting in dev mode
 $ mvn quarkus:dev
 
-If you already built the docker image you can run it by
-$ docker run -i --rm -p 8080:8080 smart-fridge:latest
-
 You have to run the mongo database additionaly
 $ docker-compose up -d
 ```
@@ -46,3 +43,4 @@ $ docker-compose up -d
 ## Some demo images
 
 ![alt smart-fridge-demo](assets/img/smart-fridge-demo.png)
+![alt smart-fridge-demo-1](assets/img/smart-fridge-demo-1.png)
