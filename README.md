@@ -36,7 +36,7 @@ $ docker build -f src/main/docker/Dockerfile.multistage -t smart-fridge:latest .
 Starting in dev mode
 $ mvn quarkus:dev
 
-You have to run the mongo database additionaly
+Starting in production mode
 $ docker-compose up -d
 ```
 
